@@ -3,6 +3,5 @@ version: '3'
 services:
   listener:
     build: .
-    environment:
-      - "ROS_MASTER_URI=http://tb3v2.main.ad.rit.edu:11311/"
-      - "ROS_IP=129.21.106.115"
+    network_mode: 'host'
+    env_file: './ROS.env'
